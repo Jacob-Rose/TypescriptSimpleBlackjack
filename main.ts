@@ -1,11 +1,7 @@
 
-var deck: string[];
+var deck: string[] = ["2","3","4","5","6","7","8","9","10","J","Q","K","A"]
 var playerHand: Array<string> = new Array()
 var dealerHand: Array<string> = new Array()
-
-function initializeDeck() {
-    deck = ["2","3","4","5","6","7","8","9","10","J","Q","K","A"]
-}
 
 function drawCard(player: boolean){
     if (player){
@@ -53,7 +49,7 @@ function calculateScore(player: boolean): number {
             case "Q":
             case "J":
                 score += 10
-                break     
+                break
             default:
                 score += Number(card)
                 break
@@ -68,7 +64,7 @@ function calculateScore(player: boolean): number {
             else {
                 score += 11
             }
-        
+
     }
 
     return score
